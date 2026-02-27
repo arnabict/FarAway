@@ -7,8 +7,7 @@ export default function Item({ item, onDeleteItems, onToggleItems }) {
         onChange={() => onToggleItems(item.id)}
       />
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
-        {item.quantity}
-        {item.description}
+        {item.quantity} {item.description}
       </span>
       {/* call function only when the event happens */}
       <button onClick={() => onDeleteItems(item.id)}>❌</button>
